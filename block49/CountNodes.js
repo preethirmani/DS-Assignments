@@ -22,15 +22,16 @@ console.log('node', node);
 
 function countNodes(node) {
   if(node === null) return 0;
+  let queue = [node];
+  let count = 0;
 
-  function count(node, sum) {
-    if(node === null) return sum;
-    sum = sum + node.val;
-    countNodes(node.left, sum);
-    countNodes(node.right, sum);
+  while(queue.length > 0) {
+    let current = queue.shift();
+    count++
+    if(current.left) queue.push(current.left);
+    if(current.right) queue.push(current.right);
   }
-
-  return count(node, 0);
+  return count;
 }
 
 console.log(countNodes(node));

@@ -1,3 +1,8 @@
+/**
+ * Create a Node class in JavaScript to build parts of a binary tree. Then, make an 'isSameTree' function. This function checks two binary trees and tells if they are the same or not. Test your function by making two binary trees and comparing them. For an input binary tree with nodes [1,2,3], 'isSameTree' should return 'true' for the same output [1,2,3] and 'false' otherwise. 
+ */
+
+
 class TreeNode {
   constructor(val) {
     this.val = val;

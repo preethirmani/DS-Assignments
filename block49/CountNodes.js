@@ -35,3 +35,16 @@ function countNodes(node) {
 }
 
 console.log(countNodes(node));
+
+
+//Recursion
+function recursiveCount(node) {
+  if(node === null) return 0;
+    
+    const leftCount = recursiveCount(node.left);
+    const rightCount = recursiveCount(node.right);
+  
+
+  return leftCount + rightCount + 1;
+}
+console.log('RecursiveCount::',recursiveCount(node));
